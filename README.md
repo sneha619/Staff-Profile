@@ -2,6 +2,8 @@
 
 This is a responsive profile page built with **React.js** and **Tailwind CSS**, showcasing user details such as name, contact info, social links, and more.
 
+Deployed link -> https://staff-profile-nu.vercel.app/
+
 ---
 
 ## ✨ Features
