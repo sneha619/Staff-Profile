@@ -15,13 +15,6 @@ export default function StaffProfileView({ profile }) {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-gray-50 min-h-screen overflow-y-auto relative" style={{ maxHeight: 'calc(100vh - 40px)' }}>
       
-      {/* Fixed scroll-to-bottom button */}
-      <div className="fixed right-4 bottom-4 bg-gray-800 text-white rounded-full p-3 shadow-lg z-10 cursor-pointer" 
-           onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
-        </svg>
-      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Column - Profile Card */}
         <div className="lg:col-span-1">

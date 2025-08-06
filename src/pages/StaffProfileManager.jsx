@@ -85,13 +85,13 @@ const StaffProfileManager = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <h1 className="text-3xl font-bold text-gray-800">Staff Profile Management</h1>
           <button
             onClick={handleCreateProfile}
-            className="flex items-center space-x-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors shadow-md"
+            className="flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors shadow-md text-sm sm:text-base whitespace-nowrap"
           >
-            <Plus size={20} />
+            <Plus size={18} />
             <span>Create New Profile</span>
           </button>
         </div>
