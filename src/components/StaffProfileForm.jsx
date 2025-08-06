@@ -66,18 +66,18 @@ export default function StaffProfileForm({ isOpen, onClose, onSave, initialData 
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] overflow-hidden relative">
-        <div className="flex items-center justify-between p-6 border-b">
-          <h2 className="text-xl font-semibold text-gray-800">Staff profile {mode === "create" ? "Create" : "Edit"}</h2>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 sm:p-4">
+      <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[95vh] sm:max-h-[90vh] overflow-hidden relative">
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b">
+          <h2 className="text-lg sm:text-xl font-semibold text-gray-800">Staff profile {mode === "create" ? "Create" : "Edit"}</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors">
-            <X size={24} />
+            <X size={20} className="sm:w-6 sm:h-6" />
           </button>
         </div>
 
         <div className="flex border-b">
           <button
-            className={`px-6 py-3 font-medium ${
+            className={`px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-medium ${
               activeTab === "profile" ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-600 hover:text-gray-800"
             }`}
             onClick={() => setActiveTab("profile")}
@@ -85,17 +85,17 @@ export default function StaffProfileForm({ isOpen, onClose, onSave, initialData 
             Profile
           </button>
           <button
-            className={`px-6 py-3 font-medium ${
+            className={`px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-medium ${
               activeTab === "related" ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-600 hover:text-gray-800"
             }`}
             onClick={() => setActiveTab("related")}
           >
-            Related information
+            Related info
           </button>
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col h-full">
-          <div className="flex-1 overflow-y-auto p-6 scroll-smooth" style={{ maxHeight: 'calc(80vh - 180px)' }}>
+          <div className="flex-1 overflow-y-auto p-3 sm:p-6 scroll-smooth" style={{ maxHeight: 'calc(80vh - 160px)' }}>
     
             {activeTab === "profile" && (
               <div className="space-y-6">
@@ -631,17 +631,17 @@ export default function StaffProfileForm({ isOpen, onClose, onSave, initialData 
             )}
           </div>
 
-          <div className="flex justify-end space-x-4 p-6 border-t bg-gray-50 sticky bottom-0">
+          <div className="flex justify-end space-x-2 sm:space-x-4 p-4 sm:p-6 border-t bg-gray-50 sticky bottom-0">
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-2 text-gray-600 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+              className="px-3 sm:px-6 py-2 text-gray-600 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors text-sm sm:text-base"
             >
               Close
             </button>
             <button
               type="submit"
-              className="px-6 py-2 text-white bg-gray-800 rounded-md hover:bg-gray-900 transition-colors"
+              className="px-3 sm:px-6 py-2 text-white bg-gray-800 rounded-md hover:bg-gray-900 transition-colors text-sm sm:text-base"
             >
               Save
             </button>

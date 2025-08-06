@@ -42,13 +42,13 @@ function StaffProfileList({ profiles = [], onViewProfile, onEditProfile }) {
                 if (!profile) return null;
                 return (
                   <tr key={profile.id || 'unknown'} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{profile.staffCode || 'N/A'}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-sm font-medium text-gray-900">{profile.staffCode || 'N/A'}</td>
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         {profile.profileImage ? (
-                          <img src={profile.profileImage} alt="Profile" className="w-10 h-10 rounded-full mr-3 object-cover" />
+                          <img src={profile.profileImage} alt="Profile" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full mr-2 sm:mr-3 object-cover" />
                         ) : (
-                          <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-200 rounded-full mr-2 sm:mr-3"></div>
                         )}
                         <div>
                           <div className="text-sm font-medium text-gray-900">
@@ -57,11 +57,11 @@ function StaffProfileList({ profiles = [], onViewProfile, onEditProfile }) {
                         </div>
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{profile.email || 'N/A'}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{profile.jobPosition || 'N/A'}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-sm text-gray-500">{profile.email || 'N/A'}</td>
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-sm text-gray-500">{profile.jobPosition || 'N/A'}</td>
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap">
                       <span
-                        className={`inline-flex px-3 py-1 text-xs font-semibold rounded-full ${
+                        className={`inline-flex px-2 sm:px-3 py-1 text-xs font-semibold rounded-full ${
                           profile.status === "Working" || profile.status === "Full-time"
                             ? "bg-green-100 text-green-800"
                             : profile.status === "On Leave"
@@ -72,8 +72,8 @@ function StaffProfileList({ profiles = [], onViewProfile, onEditProfile }) {
                         {profile.status || 'Unknown'}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <div className="flex space-x-2">
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-sm font-medium">
+                      <div className="flex space-x-1 sm:space-x-2">
                         <button
                           onClick={() => onViewProfile && onViewProfile(profile)}
                           className="text-blue-600 hover:text-blue-900 p-1"
@@ -95,7 +95,7 @@ function StaffProfileList({ profiles = [], onViewProfile, onEditProfile }) {
               })
             ) : (
               <tr>
-                <td colSpan="6" className="px-6 py-4 text-center text-gray-500">
+                <td colSpan="6" className="px-3 sm:px-6 py-3 sm:py-4 text-center text-gray-500">
                   No profiles available
                 </td>
               </tr>
