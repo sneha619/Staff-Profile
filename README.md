@@ -1,6 +1,6 @@
 # React Profile Page with Tailwind CSS
 
-This is a responsive profile page built with **React.js** and **Tailwind CSS**, showcasing user details such as name, contact info, social links, and more.
+This is a responsive profile page built with **React.js** and **Tailwind CSS**, showcasing Staff Data such as name, contact info, social links, and more.
 
 Deployed link -> https://staff-profile-nu.vercel.app/
 
@@ -17,11 +17,16 @@ Deployed link -> https://staff-profile-nu.vercel.app/
 
 ---
 
-## 🛠 Tech Stack
+🧰 Tech Stack
 
-- React.js
-- Tailwind CSS
-- Lucide Icons (React)
+⚛️ React.js (via Create React App)
+
+💨 Tailwind CSS v3.4.17
+
+📦 Lucide React icons
+
+🛠 ESLint via react-scripts
+
 
 ---
 
@@ -65,6 +70,3 @@ my-app/
 ├── tailwind.config.js
 ├── postcss.config.js
 └── package.json
-
-📦 Installation
-Clone the repository:
